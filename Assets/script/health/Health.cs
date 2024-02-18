@@ -31,7 +31,8 @@ public class Health : MonoBehaviour
 
         if (currentHealth > 0)
         {
-            anim.SetTrigger("hurt");
+            if (anim != null)
+                anim.SetTrigger("hurt");
             //ifram
             StartCoroutine(Invunerability());
         }
@@ -39,15 +40,16 @@ public class Health : MonoBehaviour
         {
             if (!dead)
             {
-                anim.SetTrigger("die");
+                if (anim != null)
+                    anim.SetTrigger("die");
 
                 // deactive all component
                 foreach (Behaviour component in components)
                 {
                     component.enabled = false;
                 }
-
                 dead = true;
+                
             }
         }
 
@@ -75,7 +77,8 @@ public class Health : MonoBehaviour
         Physics2D.IgnoreLayerCollision(10, 11, false);
         invulnerable = false;
     }
-    private void Deacivate(){
+    private void Deacivate()
+    {
         gameObject.SetActive(false);
     }
 }

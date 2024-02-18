@@ -33,7 +33,9 @@ public class ProjectTile : MonoBehaviour
     {
         hit = true;
         boxCollider.enabled = false;
-        anim.SetTrigger("explore");
+        if (anim != null)
+            anim.SetTrigger("explore");
+        
         if (other.CompareTag("enemy"))
         {
             Health enemyHealth = other.GetComponent<Health>();

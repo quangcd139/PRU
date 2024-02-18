@@ -137,12 +137,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 684351305}
     m_Modifications:
     - target: {fileID: 178144153089883182, guid: baf6b6b51a6d6834d92c34829eb67241, type: 3}
+      propertyPath: damage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 178144153089883182, guid: baf6b6b51a6d6834d92c34829eb67241, type: 3}
       propertyPath: shotPoint
       value: 
       objectReference: {fileID: 293409298}
     - target: {fileID: 178144153089883182, guid: baf6b6b51a6d6834d92c34829eb67241, type: 3}
+      propertyPath: attackCooldown
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 178144153089883182, guid: baf6b6b51a6d6834d92c34829eb67241, type: 3}
       propertyPath: colliderDistance
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 178144153089883182, guid: baf6b6b51a6d6834d92c34829eb67241, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381203387072589219, guid: baf6b6b51a6d6834d92c34829eb67241, type: 3}
+      propertyPath: startingHealth
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3982205928999674088, guid: baf6b6b51a6d6834d92c34829eb67241, type: 3}
       propertyPath: m_IsActive
@@ -996,7 +1012,7 @@ MonoBehaviour:
   rectangularPrefab: {fileID: 3574932968576227227, guid: 91553080fbb8dcd48905e376ed1d74bc, type: 3}
   spawnDelay: 1
   roundDuration: 15
-  enemiesPerRound: 1
+  enemiesPerRound: 10
 --- !u!4 &1314853599
 Transform:
   m_ObjectHideFlags: 0
@@ -1055,7 +1071,7 @@ MonoBehaviour:
   rectangularPrefab: {fileID: 3574932968576227227, guid: a7b0aa1f29be1804ca542790f31940e8, type: 3}
   spawnDelay: 1
   roundDuration: 30
-  enemiesPerRound: 0
+  enemiesPerRound: 4
 --- !u!4 &1594235060
 Transform:
   m_ObjectHideFlags: 0
@@ -1185,11 +1201,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 178144153089883182, guid: f2230c955b57be945b42d7acdc4eb8bb, type: 3}
       propertyPath: damage
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1042805535718405906, guid: f2230c955b57be945b42d7acdc4eb8bb, type: 3}
       propertyPath: m_TagString
       value: ally
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381203387072589219, guid: f2230c955b57be945b42d7acdc4eb8bb, type: 3}
+      propertyPath: startingHealth
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3381203387072589219, guid: f2230c955b57be945b42d7acdc4eb8bb, type: 3}
       propertyPath: components.Array.size
@@ -1481,6 +1501,10 @@ PrefabInstance:
     - target: {fileID: 1911214143791186795, guid: 015f9d85a3cd45e4ca0dd759191b9b34, type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2707926247342236572, guid: 015f9d85a3cd45e4ca0dd759191b9b34, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4994394169782686234, guid: 015f9d85a3cd45e4ca0dd759191b9b34, type: 3}
       propertyPath: m_LocalPosition.x
