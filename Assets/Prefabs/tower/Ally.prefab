@@ -123,7 +123,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.53814125, y: 0}
+  m_Offset: {x: -0.27861214, y: 0.42731977}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -134,7 +134,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.3717766, y: 8.333333}
+  m_Size: {x: 5.0654945, y: 7.4786925}
   m_EdgeRadius: 0
 --- !u!50 &7767152807205962021
 Rigidbody2D:
@@ -175,10 +175,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f95f61cf1124ce84dbe244ad110dedc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 200
+  startingHealth: 100
   iFramesDuration: 3
   numberOfFlashes: 1
-  components: []
+  components:
+  - {fileID: 178144153089883182}
 --- !u!114 &178144153089883182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,7 +194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 2
   range: 3
-  damage: 30
+  damage: 20
   shotPoint: {fileID: 5879622847160852853}
   bullets:
   - {fileID: 3982205928999674088}

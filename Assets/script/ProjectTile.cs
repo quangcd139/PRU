@@ -5,13 +5,13 @@ using UnityEngine;
 public class ProjectTile : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private int damageAmount;
     private float direction;
     private bool hit;
     private Animator anim;
     private BoxCollider2D boxCollider;
     private float lifeTime;
 
-    public int damageAmount = 50;
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -35,7 +35,7 @@ public class ProjectTile : MonoBehaviour
         boxCollider.enabled = false;
         if (anim != null)
             anim.SetTrigger("explore");
-        
+
         if (other.CompareTag("enemy"))
         {
             Health enemyHealth = other.GetComponent<Health>();

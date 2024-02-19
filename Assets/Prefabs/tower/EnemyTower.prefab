@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f95f61cf1124ce84dbe244ad110dedc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 200
+  startingHealth: 100
   iFramesDuration: 3
   numberOfFlashes: 1
   components:
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 3
   range: 3
-  damage: 30
+  damage: 20
   shotPoint: {fileID: 5879622847160852853}
   bullets:
   - {fileID: 3982205928999674088}
