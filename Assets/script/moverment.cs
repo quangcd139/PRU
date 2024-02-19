@@ -22,7 +22,8 @@ public class PlayerMovement : MonoBehaviour
         //quay dau
         flip();
         //anim
-        anim.SetFloat("move",Mathf.Abs(horizontalInput));
+        anim.SetFloat("move", Mathf.Abs(horizontalInput));
+        
 
     }
 
@@ -38,7 +39,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public bool canAttack(){
+    public bool canAttack()
+    {
         return horizontalInput == 0;
     }
 }

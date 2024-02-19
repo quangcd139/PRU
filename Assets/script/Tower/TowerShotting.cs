@@ -20,6 +20,7 @@ public class TowerShotting : MonoBehaviour
 
     [Header("Player Layer")]
     [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private AudioClip attackSound;
     private float cooldownTimer = Mathf.Infinity;
 
     private Animator anim;
@@ -40,6 +41,7 @@ public class TowerShotting : MonoBehaviour
             {
                 cooldownTimer = 0;
                 RangedAttack();
+                SoundManager.instance.PlaySound(attackSound,1);
             }
         }
     }

@@ -12,6 +12,7 @@ public class MeleeAlly : MonoBehaviour
     [Header("Collider Parameters")]
     [SerializeField] private float colliderDistance;
     [SerializeField] private BoxCollider2D boxCollider;
+    [SerializeField] private AudioClip attackSound;
 
     [Header("Player Layer")]
     [SerializeField] private LayerMask playerLayer;
@@ -28,7 +29,7 @@ public class MeleeAlly : MonoBehaviour
         enemyMoverment = GetComponent<EnemyMoverment>();
     }
     void Update()
-    {
+    {   
         cooldownTimer += Time.deltaTime;
 
         //attack only when player in sight?
@@ -39,6 +40,7 @@ public class MeleeAlly : MonoBehaviour
             {
                 cooldownTimer = 0;
                 anim.SetTrigger("meleeAttack");
+                SoundManager.instance.PlaySound(attackSound,1);
             }
         }
         if (enemyMoverment != null)

@@ -10,7 +10,7 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask playerLayer;
-
+    [SerializeField] private AudioClip attackSound;
     private Animator anim;
     private float cooldownTimer = Mathf.Infinity;
     private Health playerHealth;
@@ -33,6 +33,7 @@ public class MeleeEnemy : MonoBehaviour
             {
                 cooldownTimer = 0;
                 anim.SetTrigger("meleeAttack");
+                SoundManager.instance.PlaySound(attackSound,1);
             }
         }
         if (enemyMoverment != null)

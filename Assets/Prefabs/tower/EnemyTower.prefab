@@ -178,6 +178,8 @@ MonoBehaviour:
   startingHealth: 100
   iFramesDuration: 3
   numberOfFlashes: 1
+  hurtSound: {fileID: 8300000, guid: 1fba5234b899a80448ae124c6e0cc2f6, type: 3}
+  dieSound: {fileID: 8300000, guid: a153c1dd2ba2cdc459cea451b5dfcbc3, type: 3}
   components:
   - {fileID: 178144153089883182}
 --- !u!114 &178144153089883182
@@ -206,6 +208,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+  attackSound: {fileID: 8300000, guid: 9f70bf9888f1bd942b9697b21f60c50a, type: 3}
 --- !u!95 &-4558048410164365359
 Animator:
   serializedVersion: 5

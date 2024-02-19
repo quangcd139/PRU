@@ -8,6 +8,8 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float attackCooldown;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject[] fireballs;
+
+    [SerializeField] private AudioClip fireballSound;
     private Animator anim;
     private PlayerMovement playerMovement;
     private float cooldownTimer = Mathf.Infinity;
@@ -19,7 +21,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0)
+        if (Input.GetKeyDown(KeyCode.U)
          && cooldownTimer > attackCooldown
          && playerMovement.canAttack())
         //  && playerMovement.canAttack())
@@ -31,13 +33,13 @@ public class PlayerAttack : MonoBehaviour
 
     private void Attack()
     {
+        SoundManager.instance.PlaySound(fireballSound,1);
         anim.SetTrigger("attack");
         cooldownTimer = 0;
 
         fireballs[FindFireball()].transform.position = firePoint.position;
         fireballs[FindFireball()].GetComponent<ProjectTile>()
         .SetDirection(Mathf.Sign(transform.localScale.x));
-
     }
 
     private int FindFireball(){
@@ -47,7 +49,6 @@ public class PlayerAttack : MonoBehaviour
                 return i;
             }
         }
-
         return 0;
     }
 }

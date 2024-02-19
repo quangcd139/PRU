@@ -13,6 +13,8 @@ public class Health : MonoBehaviour
     [Header("iFrames")]
     [SerializeField] private float iFramesDuration;
     [SerializeField] private int numberOfFlashes;
+    [SerializeField] private AudioClip hurtSound;
+    [SerializeField] private AudioClip dieSound;
     private SpriteRenderer spriteRend;
 
     [Header("Components")]
@@ -34,6 +36,7 @@ public class Health : MonoBehaviour
             if (anim != null)
                 anim.SetTrigger("hurt");
             //ifram
+            SoundManager.instance.PlaySound(hurtSound,1);
             StartCoroutine(Invunerability());
         }
         else
@@ -42,26 +45,19 @@ public class Health : MonoBehaviour
             {
                 if (anim != null)
                     anim.SetTrigger("die");
-
+                
                 // deactive all component
                 foreach (Behaviour component in components)
                 {
                     component.enabled = false;
                 }
                 dead = true;
-                
+                SoundManager.instance.PlaySound(dieSound,1);
             }
         }
 
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            TakeDamage(10f);
-        }
-    }
 
     private IEnumerator Invunerability()
     {
