@@ -7,6 +7,7 @@ public class ChonMan : MonoBehaviour
     public void Man1()
     {
         SceneManager.LoadScene(2);
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame

@@ -377,6 +377,7 @@ MonoBehaviour:
   skillCountDown: 10
   skillPoint: {fileID: 0}
   skill: {fileID: 1248490769207966437, guid: d1408778eeb5326458371ed6e9dc2241, type: 3}
+  skillSound: {fileID: 8300000, guid: 9fafe250ffe6fce42980e40024abc827, type: 3}
 --- !u!1 &6744587210268358766
 GameObject:
   m_ObjectHideFlags: 0

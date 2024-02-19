@@ -36,7 +36,7 @@ public class Health : MonoBehaviour
             if (anim != null)
                 anim.SetTrigger("hurt");
             //ifram
-            SoundManager.instance.PlaySound(hurtSound,1);
+            SoundManager.instance.PlaySound(hurtSound,0.7f);
             StartCoroutine(Invunerability());
         }
         else

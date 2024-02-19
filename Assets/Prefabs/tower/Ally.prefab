@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f95f61cf1124ce84dbe244ad110dedc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 200
   iFramesDuration: 3
   numberOfFlashes: 1
   hurtSound: {fileID: 8300000, guid: 1fba5234b899a80448ae124c6e0cc2f6, type: 3}

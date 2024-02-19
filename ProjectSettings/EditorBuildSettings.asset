@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/ChonMan.unity
     guid: 45bf1f027ec52cb469ee5355bd0e5170
   - enabled: 1
-    path: Assets/Scenes/Gameplay.unity
+    path: Assets/Scenes/man1.unity
     guid: 60075c4eb9c99574488d79005989692a
   m_configObjects: {}
