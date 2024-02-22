@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "PRU-main.sln"
+    "dotnet.defaultSolution": "PRU.sln"
 }

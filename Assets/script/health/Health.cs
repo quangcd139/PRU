@@ -26,21 +26,25 @@ public class Health : MonoBehaviour
     public GameObject popupDamePrefab;
 
     public TMP_Text popUpText;
-    private bool invulnerable;
+    private UIManager uIManager;
 
     private void Awake()
     {
         currentHealth = startingHealth;
         anim = GetComponent<Animator>();
+        uIManager = FindObjectOfType<UIManager>();
     }
 
     public void TakeDamage(float _damage)
     {
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
 
-        popUpText.text = _damage.ToString();
-        Instantiate(popupDamePrefab, gameObject.transform.position, Quaternion.identity);
-
+        if (gameObject.CompareTag("enemy"))
+        {
+            popUpText.text = _damage.ToString();
+            Instantiate(popupDamePrefab, transform.position, Quaternion.identity);
+        }
+        
         if (currentHealth > 0)
         {
             if (anim != null)
@@ -68,27 +72,24 @@ public class Health : MonoBehaviour
                 {
                     CoinCounter.instance.increaseCoins(coin);
                 }
+                if (gameObject.CompareTag("Player") || gameObject.CompareTag("AllyTower"))
+                {
+                    uIManager.GameOver();
+                    return;
+                }
+                if (gameObject.CompareTag("EnemyTower"))
+                {
+                    uIManager.Win();
+                    return;
+                }
                 SoundManager.instance.PlaySound(dieSound, 1);
+
             }
         }
 
     }
 
 
-    private IEnumerator Invunerability()
-    {
-        invulnerable = true;
-        Physics2D.IgnoreLayerCollision(10, 11, true);
-        for (int i = 0; i < numberOfFlashes; i++)
-        {
-            spriteRend.color = new Color(1, 0, 0, 0.5f);
-            yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
-            spriteRend.color = Color.white;
-            yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
-        }
-        Physics2D.IgnoreLayerCollision(10, 11, false);
-        invulnerable = false;
-    }
     private void Deacivate()
     {
         gameObject.SetActive(false);

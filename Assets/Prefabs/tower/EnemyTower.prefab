@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -4558048410164365359}
   m_Layer: 6
   m_Name: EnemyTower
-  m_TagString: enemy
+  m_TagString: EnemyTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,6 +182,9 @@ MonoBehaviour:
   dieSound: {fileID: 8300000, guid: a153c1dd2ba2cdc459cea451b5dfcbc3, type: 3}
   components:
   - {fileID: 178144153089883182}
+  coin: 0
+  popupDamePrefab: {fileID: 2863548708969375908, guid: 0e9bd37dd944976448654d233b67595a, type: 3}
+  popUpText: {fileID: 8552800282043238726, guid: 0e9bd37dd944976448654d233b67595a, type: 3}
 --- !u!114 &178144153089883182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,9 +197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f13e2ead257b3438d22b1b1aa95b2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 3
+  attackCooldown: 2
   range: 3
-  damage: 30
   shotPoint: {fileID: 5879622847160852853}
   bullets:
   - {fileID: 3982205928999674088}

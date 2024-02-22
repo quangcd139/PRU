@@ -8,7 +8,6 @@ public class TowerShotting : MonoBehaviour
     [Header("Attack Parameters")]
     [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
-    [SerializeField] private int damage;
 
     [Header("Ranged Attack")]
     [SerializeField] private Transform shotPoint;

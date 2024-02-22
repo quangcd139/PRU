@@ -37,16 +37,15 @@ public class ProjectTile : MonoBehaviour
         if (anim != null)
             anim.SetTrigger("explore");
 
-        if (other.CompareTag("enemy"))
-        {
-            Health enemyHealth = other.GetComponent<Health>();
 
-            if (enemyHealth != null)
-            {
-                enemyHealth.TakeDamage(damageAmount);
-            }
+        Health enemyHealth = other.GetComponent<Health>();
+
+        if (enemyHealth != null)
+        {
+            enemyHealth.TakeDamage(damageAmount);
         }
-        
+
+
     }
 
     public void SetDirection(float _direction)
@@ -66,7 +65,7 @@ public class ProjectTile : MonoBehaviour
         transform.localScale.y, transform.localScale.z);
     }
 
-    
+
 
     private void Deacivate()
     {

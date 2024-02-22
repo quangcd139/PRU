@@ -6,7 +6,6 @@ public class TowerProjectTile : TowerDamage
 {
     [SerializeField] private float speed;
     [SerializeField] private float resetTime;
-    [SerializeField] private int damageAmount;
     private float lifetime;
     private Animator anim;
     private BoxCollider2D coll;

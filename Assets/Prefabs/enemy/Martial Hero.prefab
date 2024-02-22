@@ -212,6 +212,8 @@ MonoBehaviour:
   - {fileID: 3807785127203620842}
   - {fileID: -8261680919540062855}
   coin: 70
+  popupDamePrefab: {fileID: 2863548708969375908, guid: 0e9bd37dd944976448654d233b67595a, type: 3}
+  popUpText: {fileID: 8552800282043238726, guid: 0e9bd37dd944976448654d233b67595a, type: 3}
 --- !u!50 &4387053761179997636
 Rigidbody2D:
   serializedVersion: 4

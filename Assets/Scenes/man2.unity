@@ -489,7 +489,7 @@ MonoBehaviour:
   rectangularPrefab: {fileID: 4548259021657795923, guid: 9ed0cf61591355f408679ed02d9147ab, type: 3}
   spawnDelay: 4
   roundDuration: 30
-  enemiesPerRound: 4
+  enemiesPerRound: 0
 --- !u!114 &391295046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -753,7 +753,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471144883}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 091377f295317b1468acb677d21e127a, type: 3}
   m_Name: 
@@ -2234,7 +2234,7 @@ MonoBehaviour:
   rectangularPrefab: {fileID: 3574932968576227227, guid: 91553080fbb8dcd48905e376ed1d74bc, type: 3}
   spawnDelay: 1
   roundDuration: 30
-  enemiesPerRound: 5
+  enemiesPerRound: 0
 --- !u!4 &1314853599
 Transform:
   m_ObjectHideFlags: 0
